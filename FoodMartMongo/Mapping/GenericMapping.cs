@@ -18,7 +18,7 @@ namespace FoodMartMongo.Mapping
             CreateMap<Product, ResultProductDto>().ReverseMap();
             CreateMap<Product, CreateProductDto>().ReverseMap();
             CreateMap<Product, UpdateProductDto>().ReverseMap();
-            CreateMap<Product, GetCategoryByIdDto>().ReverseMap();
+            CreateMap<Product, GetProductByIdDto>().ReverseMap();
 
             CreateMap<Customer, ResultCustomerDto>().ReverseMap();
             CreateMap<Customer, CreateCustomerDto>().ReverseMap();
