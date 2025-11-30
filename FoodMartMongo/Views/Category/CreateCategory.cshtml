@@ -1,0 +1,18 @@
+﻿@model FoodMartMongo.Dtos.CategoryDtos.CreateCategoryDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <h3 class="alert alert-primary">Yeni Kategori Ekleme Sayfası</h3>
+    <form method="post">
+        <label>Kategori Adı</label>
+        <input type="text" asp-for="CategoryName" class="form-control" />
+        <br />
+        <button class="btn btn-info">Kategoriyi Ekle</button>
+    </form>
+</div>

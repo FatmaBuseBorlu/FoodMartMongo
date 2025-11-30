@@ -4,7 +4,7 @@ namespace FoodMartMongo.Services.CustomerServices
 {
     public interface ICustomerService
     {
-        Task<List<ResultCustomerDto>> GetAllCustomers();
+        Task<List<ResultCustomerDto>> GetAllCustomerAsync();
         Task CreateCustomerAsync(CreateCustomerDto createCustomerDto);
         Task UpdateCustomerAsync(UpdateCustomerDto updateCustomerDto);
         Task DeleteCustomerAsync(string customerıd);

@@ -27,9 +27,10 @@ namespace FoodMartMongo.Services.ProductServices
             await _productCollection.DeleteOneAsync(x => x.ProductId == id);
         }
 
-        public Task<List<ResultProductDto>> GetAllProductAsync()
+        public async Task<List<ResultProductDto>> GetAllProductAsync()
         {
-           
+            var values = await _productCollection.Find(x => true).ToListAsync();
+            return _mapper.Map<List<ResultProductDto>>(values);
         }
 
      

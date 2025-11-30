@@ -36,11 +36,6 @@ namespace FoodMartMongo.Services.CustomerServices
             return _mapper.Map<List<ResultCustomerDto>>(values);
         }
 
-        public Task<List<ResultCustomerDto>> GetAllCustomers()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<GetCustomerByIdDto> GetCustomerByIdAsync(string customerId)
         {
             var value = await _customerCollection.Find(x => x.CustomerId == customerId).FirstOrDefaultAsync();

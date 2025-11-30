@@ -1,0 +1,32 @@
+﻿@model FoodMartMongo.Dtos.ProductDtos.CreateProductDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <h3 class="alert alert-primary">Yeni Ürün Ekleme Sayfası</h3>
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Ürün Fiyatı</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+        <label>Ürün Görseli</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Ürün Stok Sayısı</label>
+        <input type="text" asp-for="StockCount" class="form-control" />
+        <br />
+        <label>Ürün Kategori</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.v">
+            <option value="">-- Kategori Seçin --</option>
+        </select>
+        <br />
+        <button class="btn btn-info">Ürünü Ekle</button>
+    </form>
+</div>

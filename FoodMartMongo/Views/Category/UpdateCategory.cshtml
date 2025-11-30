@@ -1,0 +1,19 @@
+﻿@model FoodMartMongo.Dtos.CategoryDtos.GetCategoryByIdDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <h3 class="alert alert-primary">Kategori Güncelleme Sayfası</h3>
+    <form method="post">
+        <input type="hidden" asp-for="CategoryId" />
+        <label>Kategori Adı</label>
+        <input type="text" asp-for="CategoryName" class="form-control" />
+        <br />
+        <button class="btn btn-info">Kategoriyi Güncelle</button>
+    </form>
+</div>
