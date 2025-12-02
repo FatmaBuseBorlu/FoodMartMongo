@@ -9,5 +9,6 @@ namespace FoodMartMongo.Services.ProductServices
         Task UpdateProductAsync(UpdateProductDto updateProductDto);
         Task DeleteProductAsync(string id);
         Task<GetProductByIdDto> GetProductByIdAsync(string id);
+        Task<List<ResultProductDto>> GetCheapestProductsAsync();
     }
 }

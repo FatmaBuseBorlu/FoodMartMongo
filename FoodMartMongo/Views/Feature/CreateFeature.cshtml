@@ -1,0 +1,21 @@
+﻿@model FoodMartMongo.Dtos.FeatureDtos.CreateFeatureDto
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    // Not: Normalde Admin Layout kullanırız ama şimdilik elindeki Layout ile çalışsın.
+}
+
+<div class="container mt-5">
+    <h2>Yeni Özellik / Etiket Ekle</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label>Etiket Başlığı (Örn: Organik, Süt Ürünleri)</label>
+            <input type="text" class="form-control" asp-for="Title" />
+        </div>
+        <div class="mb-3">
+            <label>Link (URL - Şimdilik # koyabilirsin)</label>
+            <input type="text" class="form-control" asp-for="Url" value="#" />
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>

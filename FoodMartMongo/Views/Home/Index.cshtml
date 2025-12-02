@@ -1,8 +1,216 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ 
 }
+    
+<section class="py-3" style="background-image: url('~/images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                <div class="banner-blocks">
+
+                    <div class="banner-ad large bg-info block-1">
+
+                        <div class="swiper main-swiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="row banner-content p-5">
+                                        <div class="content-wrapper col-md-7">
+                                            <div class="categories my-3">100% Doğal</div>
+                                            <h3 class="display-4">Taze Smoothie & Yaz İçecekleri</h3>
+                                            <p>En taze meyvelerle hazırlanmış, serinletici ve sağlıklı içeceklerimizle yazı karşılayın.</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Şimdi Al</a>
+                                        </div>
+                                        <div class="img-wrapper col-md-5">
+                                            <img src="~/images/product-thumb-1.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="row banner-content p-5">
+                                        <div class="content-wrapper col-md-7">
+                                            <div class="categories mb-3 pb-3">100% Doğal</div>
+                                            <h3 class="banner-title">Taze Smoothie & Yaz İçecekleri</h3>
+                                            <p>En taze meyvelerle hazırlanmış, serinletici ve sağlıklı içeceklerimizle yazı karşılayın.</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Koleksiyonu İncele</a>
+                                        </div>
+                                        <div class="img-wrapper col-md-5">
+                                            <img src="~/images/product-thumb-1.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="row banner-content p-5">
+                                        <div class="content-wrapper col-md-7">
+                                            <div class="categories mb-3 pb-3">100% Doğal</div>
+                                            <h3 class="banner-title">Heinz Domates Ketçabı</h3>
+                                            <p>Güneşte olgunlaşmış domateslerden üretilen efsanevi lezzet sofralarınızda.</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Koleksiyonu İncele</a>
+                                        </div>
+                                        <div class="img-wrapper col-md-5">
+                                            <img src="~/images/product-thumb-2.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="banner-ad bg-success-subtle block-2" style="background:url('~/images/ad-image-1.png') no-repeat;background-position: right bottom">
+                        <div class="row banner-content p-5">
+
+                            <div class="content-wrapper col-md-7">
+                                <div class="categories sale mb-3 pb-3">%20 İndirim</div>
+                                <h3 class="banner-title">Meyve & Sebze</h3>
+                                <a href="#" class="d-flex align-items-center nav-link">Koleksiyonu İncele <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="banner-ad bg-danger block-3" style="background:url('~/images/ad-image-2.png') no-repeat;background-position: right bottom">
+                        <div class="row banner-content p-5">
+
+                            <div class="content-wrapper col-md-7">
+                                <div class="categories sale mb-3 pb-3">%15 İndirim</div>
+                                <h3 class="item-title">Fırın Ürünleri</h3>
+                                <a href="#" class="d-flex align-items-center nav-link">Koleksiyonu İncele <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="kategoriler">
+    @await Component.InvokeAsync("_CategoryComponentPartial")
 </div>
+
+<div id="tümürünler">
+    @await Component.InvokeAsync("_TrendingProductComponentPartial")
+</div>
+
+<section class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="banner-ad bg-danger mb-3" style="background: url('~/images/ad-image-3.png');background-repeat: no-repeat;background-position: right bottom;">
+                    <div class="banner-content p-5">
+
+                        <div class="categories text-primary fs-3 fw-bold">%25'e Varan İndirim</div>
+                        <h3 class="banner-title">Luxa Bitter Çikolata</h3>
+                        <p>Çok lezzetli, kremsi ve vanilya aromalı özel tatlar.</p>
+                        <a href="#" class="btn btn-dark text-uppercase">Şimdi İncele</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="banner-ad bg-info" style="background: url('~/images/ad-image-4.png');background-repeat: no-repeat;background-position: right bottom;">
+                    <div class="banner-content p-5">
+
+                        <div class="categories text-primary fs-3 fw-bold">%25'e Varan İndirim</div>
+                        <h3 class="banner-title">Kremalı Muffin</h3>
+                        <p>Çok lezzetli ve kremsi vanilya aromalı taze muffinler.</p>
+                        <a href="#" class="btn btn-dark text-uppercase">Şimdi İncele</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="fırsatürünleri">
+    @await Component.InvokeAsync("_BestSellerProductComponentPartial")
+</div>
+
+<section class="py-5">
+    <div class="container-fluid">
+
+        <div class="bg-secondary py-5 my-5 rounded-5" style="background: url('images/bg-leaves-img-pattern.png') no-repeat;">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 p-5">
+                        <div class="section-header">
+                            <h2 class="section-title display-4">İlk alışverişinizde<span class="text-primary">25% İndirim</span> Kazanın</h2>
+                        </div>
+                        <p>FoodMart ailesine katılın! Adınızı ve e-posta adresinizi bırakın, ilk alışverişinize özel %25 indirim kodunuzu anında gönderelim. Taze ürünler, avantajlı fiyatlar sizi bekliyor.</p>
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text"
+                                       class="form-control form-control-lg" name="name" id="name" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">E-Posta Adresiniz</label>
+                                <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="name@foodmart.com">
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <label class="form-check-label" for="subscribe">
+                                    <input class="form-check-input" type="checkbox" id="subscribe" value="subscribe">
+                                    Bültene abone olmak istiyorum
+                                </label>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-dark btn-lg">Gönder & İndirimi Kap</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div id="trendürünler">
+@await Component.InvokeAsync("_MostPopularProductComponentPartial")
+</div>
+
+<section class="py-5 my-5">
+    <div class="container-fluid">
+
+        <div class="bg-warning py-5 rounded-5" style="background-image: url('~/images/bg-pattern-2.png'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="~/images/phone.png" alt="telefon uygulaması" class="image-float img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="my-5">FoodMart Uygulaması ile Alışverişi Hızlandırın</h2>
+                        <p>Mobil uygulamamızı indirerek market alışverişinizi çok daha hızlı ve kolay hale getirin. En taze ürünler, uygulamaya özel kampanyalar ve sürpriz indirimler FoodMart uygulamasında sizi bekliyor. Hemen indirin, oturduğunuz yerden market alışverişinin keyfini çıkarın.</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <img src="~/images/app-store.jpg" alt="App Store'dan İndirin">
+                            <img src="~/images/google-play.jpg" alt="Google Play'den Alın">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@await Component.InvokeAsync("_FeatureComponentPartial")
+

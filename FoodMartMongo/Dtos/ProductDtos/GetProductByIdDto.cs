@@ -9,5 +9,7 @@
         public bool Status { get; set; }
         public int StockCount { get; set; }
         public string CategoryId { get; set; }
+        public string Unit { get; set; }
+        public double Rating { get; set; }
     }
 }

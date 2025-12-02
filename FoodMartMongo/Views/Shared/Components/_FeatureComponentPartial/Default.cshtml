@@ -1,0 +1,10 @@
+﻿@model List<FoodMartMongo.Dtos.FeatureDtos.ResultFeatureDto>
+
+<section class="py-5">
+    <div class="container-fluid">
+        <h2 class="my-5">İnsanlar Bunları da Arıyor</h2> @foreach (var item in Model)
+        {
+            <a href="@item.Url" class="btn btn-warning me-2 mb-2">@item.Title</a>
+        }
+    </div>
+</section>

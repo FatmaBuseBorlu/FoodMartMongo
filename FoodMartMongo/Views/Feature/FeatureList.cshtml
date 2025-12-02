@@ -1,0 +1,23 @@
+﻿@model List<FoodMartMongo.Dtos.FeatureDtos.ResultFeatureDto>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Eklenen Etiketler</h2>
+    <a href="/Feature/CreateFeature" class="btn btn-success mb-3">Yeni Ekle</a>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Başlık</th>
+            <th>İşlem</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td><a href="/Feature/DeleteFeature/@item.FeatureId" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </table>
+</div>

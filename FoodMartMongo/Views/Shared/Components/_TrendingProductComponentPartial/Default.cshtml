@@ -1,0 +1,50 @@
+﻿@using FoodMartMongo.Dtos.ProductDtos
+@model List<ResultProductDto>
+
+<section class="py-5 overflow-hidden">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header d-flex justify-content-between mb-5">
+                    <h2 class="section-title">Popüler Ürünler</h2>
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="btn-link text-decoration-none">Tümüne Göz At →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <div class="col mb-4">
+                                <div class="product-item card border-0 shadow-sm p-3">
+                                    <figure>
+                                        <a href="#" title="@item.Name">
+                                            <img src="@item.ImageUrl" alt="@item.Name" class="tab-image w-100">
+                                        </a>
+                                    </figure>
+                                    <h3>@item.Name</h3>
+                                    <span class="qty">@item.Unit</span>
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <span class="price fs-5 fw-bold">@item.Price ₺</span>
+                                        <a href="#" class="nav-link text-primary">Sepete Ekle <i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="alert alert-warning w-100">Henüz hiç ürün eklenmemiş.</div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

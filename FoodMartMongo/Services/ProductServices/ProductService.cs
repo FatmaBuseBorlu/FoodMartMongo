@@ -45,6 +45,15 @@ namespace FoodMartMongo.Services.ProductServices
             var value = _mapper.Map<Product>(updateProductDto);
             await _productCollection.FindOneAndReplaceAsync(x => x.ProductId == updateProductDto.ProductId, value);
         }
+        public async Task<List<ResultProductDto>> GetCheapestProductsAsync()
+        {
+            var values = await _productCollection.Find(x => true)
+                                                 .SortBy(x => x.Price)
+                                                 .Limit(6)
+                                                 .ToListAsync();
+
+            return _mapper.Map<List<ResultProductDto>>(values);
+        }
 
     }
 }

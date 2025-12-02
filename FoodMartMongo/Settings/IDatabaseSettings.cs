@@ -7,6 +7,8 @@
         public string CategoryCollectionName { get; set; }
         public string ProductCollectionName { get; set; }
         public string CustomerCollectionName { get; set; }
-
+        string DiscountCollectionName { get; set; }
+        public string SliderCollectionName { get; set; }
+        string FeatureCollectionName { get; set; }
     }
 }
