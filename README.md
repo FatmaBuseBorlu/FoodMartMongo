@@ -56,15 +56,21 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <h3>🛒 Vitrin (Müşteri Arayüzü)</h3>
   <p>Kullanıcıların ürünleri incelediği, dinamik slider ve kategori alanlarına sahip ana sayfa.</p>
-  <img src="ımages/Home.png" width="800" alt="Ana Sayfa Görünümü">
+  <img src="images/Home.png" width="100%" style="max-width: 800px;" alt="Ana Sayfa Görünümü">
   <br><br>
 
   <h3>🛍️ Ürün Detay & Sepet</h3>
   <p>Hızlı sepete ekleme, detaylı ürün inceleme ve dinamik sepet yönetimi.</p>
-  <table align="center">
+  <table align="center" width="100%" border="0">
     <tr>
-      <td><img src="ımages/AllProduct.png" width="400" alt="Ürün Listesi"></td>
-      <td><img src="ımages/MostPopulerProduct.png" width="400" alt="Popüler Ürünler"></td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/AllProduct.png" width="100%" alt="Ürün Listesi">
+        <br><i>Ürün Listeleme</i>
+      </td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/MostPopulerProduct.png" width="100%" alt="Popüler Ürünler">
+        <br><i>Popüler Ürünler Vitrini</i>
+      </td>
     </tr>
   </table>
 
@@ -72,22 +78,34 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <h3>🔐 Yönetici Paneli (Admin Dashboard)</h3>
   <p>Spike Tailwind teması ile güçlendirilmiş, modern ve responsive yönetim paneli.</p>
-  <img src="ımages/AdminPanel.png" width="800" alt="Admin Paneli">
+  <img src="images/AdminPanel.png" width="100%" style="max-width: 800px;" alt="Admin Paneli">
   <br><br>
 
   <h3>📦 Ürün & Kategori Yönetimi</h3>
   <p>Admin panelinden kolayca ürün ekleme, güncelleme ve stok takibi işlemleri.</p>
-  <table align="center">
+  <table align="center" width="100%" border="0">
     <tr>
-      <td><img src="ımages/CreateProduct.png" width="400" alt="Ürün Ekleme"></td>
-      <td><img src="ımages/ProductList.png" width="400" alt="Ürün Listesi"></td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/CreateProduct.png" width="100%" alt="Ürün Ekleme">
+        <br><i>Ürün Ekleme Formu</i>
+      </td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/ProductList.png" width="100%" alt="Ürün Listesi">
+        <br><i>Ürün Yönetim Tablosu</i>
+      </td>
     </tr>
   </table>
   <br>
-  <table align="center">
+  <table align="center" width="100%" border="0">
     <tr>
-      <td><img src="ımages/CreateCategory.png" width="400" alt="Kategori Ekleme"></td>
-      <td><img src="ımages/CategoryList.png" width="400" alt="Kategori Listesi"></td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/CreateCategory.png" width="100%" alt="Kategori Ekleme">
+        <br><i>Kategori Ekleme</i>
+      </td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/CategoryList.png" width="100%" alt="Kategori Listesi">
+        <br><i>Kategori Yönetimi</i>
+      </td>
     </tr>
   </table>
 
@@ -95,10 +113,16 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <h3>🔑 Güvenlik & Giriş</h3>
   <p>MongoDB Identity altyapısı ile güvenli Admin giriş ve kayıt ekranları.</p>
-  <table align="center">
+  <table align="center" width="100%" border="0">
     <tr>
-      <td><img src="ımages/Login1.png" width="400" alt="Giriş Ekranı"></td>
-      <td><img src="ımages/Register1.png" width="400" alt="Kayıt Ekranı"></td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/Login1.png" width="100%" alt="Giriş Ekranı">
+        <br><i>Giriş Ekranı</i>
+      </td>
+      <td width="50%" valign="top" align="center">
+        <img src="images/Register1.png" width="100%" alt="Kayıt Ekranı">
+        <br><i>Kayıt Ekranı</i>
+      </td>
     </tr>
   </table>
 
@@ -106,9 +130,9 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <h3>✉️ Bülten & İletişim</h3>
   <p>Kullanıcıların mail bültenine abone olması ve otomatik indirim kodu gönderimi.</p>
-  <img src="ımages/Mail.png" width="800" alt="Bülten Alanı">
-  <br>
-  <img src="ımages/MailMessage.png" width="800" alt="Gelen Mail Örneği">
+  <img src="images/Mail.png" width="100%" style="max-width: 800px;" alt="Bülten Alanı">
+  <br><br>
+  <img src="images/MailMessage.png" width="100%" style="max-width: 800px;" alt="Gelen Mail Örneği">
 
 </div>
 
