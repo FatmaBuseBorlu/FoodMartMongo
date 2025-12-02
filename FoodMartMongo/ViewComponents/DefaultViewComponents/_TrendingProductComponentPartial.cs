@@ -16,6 +16,7 @@ namespace FoodMart.ViewComponents.DefaultViewComponents
         {
             var values = await _productService.GetAllProductAsync();
             return View(values);
+
         }
     }
 }

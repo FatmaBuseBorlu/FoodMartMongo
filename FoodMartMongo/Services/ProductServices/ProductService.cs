@@ -49,7 +49,7 @@ namespace FoodMartMongo.Services.ProductServices
         {
             var values = await _productCollection.Find(x => true)
                                                  .SortBy(x => x.Price)
-                                                 .Limit(6)
+                                                 .Limit(9)
                                                  .ToListAsync();
 
             return _mapper.Map<List<ResultProductDto>>(values);

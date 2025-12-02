@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AspNetCore.Identity.Mongo.Model;
+
 
 namespace FoodMartMongo.Entities
 {
-    public class AppUser: IdentityUser
+    public class AppUser: MongoUser
     {
         public string? Name { get; set; }
         public string? Surname { get; set; }

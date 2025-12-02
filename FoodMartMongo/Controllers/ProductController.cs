@@ -15,7 +15,6 @@ namespace FoodMartMongo.Controllers
             _productService = productService;
             _categoryService = categoryService;
         }
-
         public async Task< IActionResult> ProductList()
         {
             var values= await _productService.GetAllProductAsync();
@@ -37,7 +36,7 @@ namespace FoodMartMongo.Controllers
         {
             createProductDto.Status = true;
             await _productService.CreateProductAsync(createProductDto);
-            return RedirectToAction("Index");
+            return RedirectToAction("ProductList");
         }
 
         public async Task<IActionResult> DeleteProduct(string id)

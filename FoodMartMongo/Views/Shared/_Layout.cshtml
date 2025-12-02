@@ -144,9 +144,7 @@
 
                 <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                     <div class="main-logo">
-                        <a href="/">
-                            <img src="~/images/logo.png" alt="FoodMart Logo" class="img-fluid">
-                        </a>
+                        <a href="/"><img src="~/images/logo.png" alt="FoodMart Logo" class="img-fluid"></a>
                     </div>
                 </div>
 
@@ -155,24 +153,21 @@
                         <div class="col-md-4 d-none d-md-block">
                             <select class="form-select border-0 bg-transparent">
                                 <option>Tüm Kategoriler</option>
-                                <option>Meyve & Sebze</option>
-                                <option>İçecekler</option>
-                                <option>Atıştırmalıklar</option>
-                                <option>Süt & Kahvaltılık</option>
                             </select>
                         </div>
                         <div class="col-11 col-md-7">
-                            <form id="search-form" class="text-center" action="index.html" method="post">
+                            <form id="search-form" action="index.html" method="post">
                                 <input type="text" class="form-control border-0 bg-transparent" placeholder="20.000+ ürün içinde ara..." />
                             </form>
                         </div>
                         <div class="col-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" /></svg>
+                            <svg width="24" height="24"><use xlink:href="#search"></use></svg>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+                <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0">
+
                     <div class="support-box text-end d-none d-xl-block">
                         <span class="fs-6 text-muted">Destek Hattı</span>
                         <h5 class="mb-0">+90 555 123 45 67</h5>
@@ -180,35 +175,46 @@
 
                     <ul class="d-flex justify-content-end list-unstyled m-0">
                         <li>
-                            <a href="#" class="rounded-circle bg-light p-2 mx-1" title="Hesabım">
-                                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
+                            <!-- 🟢 GİRİŞ BUTONU → MODAL AÇAR -->
+                            <a href="#"
+                               class="rounded-circle bg-light p-2 mx-1"
+                               data-bs-toggle="modal"
+                               data-bs-target="#loginModal"
+                               title="Giriş Yap">
+                                <svg width="24" height="24"><use xlink:href="#user"></use></svg>
                             </a>
                         </li>
+
                         <li>
                             <a href="#" class="rounded-circle bg-light p-2 mx-1" title="Favorilerim">
-                                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+                                <svg width="24" height="24"><use xlink:href="#heart"></use></svg>
                             </a>
                         </li>
+
                         <li class="d-lg-none">
-                            <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" title="Sepetim">
-                                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#cart"></use></svg>
+                            <a href="#" class="rounded-circle bg-light p-2 mx-1"
+                               data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                                <svg width="24" height="24"><use xlink:href="#cart"></use></svg>
                             </a>
                         </li>
+
                         <li class="d-lg-none">
-                            <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" title="Ara">
-                                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#search"></use></svg>
+                            <a href="#" class="rounded-circle bg-light p-2 mx-1"
+                               data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                                <svg width="24" height="24"><use xlink:href="#search"></use></svg>
                             </a>
                         </li>
                     </ul>
 
-                    <div class="cart text-end d-none d-lg-block dropdown">
-                        <button class="border-0 bg-transparent d-flex flex-column gap-2 lh-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                    <div class="cart d-none d-lg-block dropdown">
+                        <button class="border-0 bg-transparent d-flex flex-column gap-2 lh-1"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
                             <span class="fs-6 text-muted dropdown-toggle">Sepetim</span>
                             <span class="cart-total fs-5 fw-bold">0.00 ₺</span>
                         </button>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
 
@@ -357,6 +363,133 @@
             </div>
         </div>
     </div>
+
+    @* LOGIN MODAL *@
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4">Giriş Yap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body px-4 pt-2 pb-1">
+                    <form method="post" action="/Account/Login" class="mt-2">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">E-posta</label>
+                            <input type="email" name="Email" class="form-control py-2 rounded-3" placeholder="ornek@mail.com" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label fw-semibold">Şifre</label>
+                            <input type="password" name="Password" class="form-control py-2 rounded-3" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="RememberMe" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Beni hatırla</label>
+                            </div>
+                            <a href="/Account/ForgotPassword"
+                               class="small fw-semibold text-decoration-none"
+                               style="color:#E0A800;">
+                                Şifremi unuttum
+                            </a>
+
+                        </div>
+
+                        <button type="submit" class="btn w-100 py-2 fw-bold text-white" style="background-color:#FFC107;">
+                            Giriş Yap
+                        </button>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer border-0 justify-content-center pb-4 pt-0">
+                    <p class="m-0 small text-muted">
+                        Hesabın yok mu?
+                        <a href="#"
+                           class="fw-semibold text-decoration-none"
+                           style="color:#E0A800;"
+                           data-bs-target="#registerModal"
+                           data-bs-toggle="modal"
+                           data-bs-dismiss="modal">
+                            Kayıt ol
+                        </a>
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    @* REGISTER MODAL *@
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4">Kayıt Ol</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body px-4 pt-2 pb-1">
+
+                    <form method="post" action="/Account/Register" class="mt-2">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Ad Soyad</label>
+                            <input type="text" name="FullName" class="form-control py-2 rounded-3" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">E-posta</label>
+                            <input type="email" name="Email" class="form-control py-2 rounded-3" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Şifre</label>
+                            <input type="password" name="Password" class="form-control py-2 rounded-3" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Şifre Tekrar</label>
+                            <input type="password" name="ConfirmPassword" class="form-control py-2 rounded-3" required>
+                        </div>
+
+                        <button type="submit" class="btn w-100 py-2 fw-bold text-white" style="background-color:#FFC107;">
+                            Kayıt Ol
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="modal-footer border-0 justify-content-center pb-4 pt-1">
+                    <p class="m-0 small text-muted">
+                        Zaten hesabın var mı?
+                        <a href="#"
+                           class="fw-semibold text-decoration-none"
+                           style="color:#E0A800;"
+                           data-bs-target="#loginModal"
+                           data-bs-toggle="modal"
+                           data-bs-dismiss="modal">
+                            Giriş yap
+                        </a>
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FoodMartMongo.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
