@@ -1,32 +1,78 @@
 ﻿@model FoodMartMongo.Dtos.ProductDtos.CreateProductDto
 
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    /* Başlık */
+    .page-title-box {
+        background: #cfe2ff;
+        border: 1px solid #9ec5fe;
+        color: #0a58ca;
+        font-weight: 700;
+        padding: 15px;
+        border-radius: 6px;
+    }
 
-<div class="container">
-    <br /><br />
-    <h3 class="alert alert-primary">Yeni Ürün Ekleme Sayfası</h3>
-    <form method="post">
-        <label>Ürün Adı</label>
+    /* Input kutuları */
+    .form-control {
+        background: #fcfcfd;
+        border: 1px solid #c4c8cb !important;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+        .form-control:focus {
+            border-color: #9ec5fe !important;
+            box-shadow: 0 0 0 0.2rem rgba(158, 197, 254, 0.4);
+        }
+
+    /* Buton */
+    .btn-submit {
+        background: #9ec5fe;
+        color: #0a58ca;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 10px 18px;
+        border: 1px solid #0a58ca;
+    }
+
+        .btn-submit:hover {
+            background: #7fbaff;
+            color: #063c91;
+        }
+</style>
+
+<div class="container mt-4">
+
+    <h3 class="page-title-box">Yeni Ürün Ekleme Sayfası</h3>
+
+    <form method="post" class="mt-4">
+
+        <label class="fw-bold">Ürün Adı</label>
         <input type="text" asp-for="Name" class="form-control" />
         <br />
-        <label>Ürün Fiyatı</label>
+
+        <label class="fw-bold">Ürün Fiyatı</label>
         <input type="text" asp-for="Price" class="form-control" />
         <br />
-        <label>Ürün Görseli</label>
+
+        <label class="fw-bold">Ürün Görseli</label>
         <input type="text" asp-for="ImageUrl" class="form-control" />
         <br />
-        <label>Ürün Stok Sayısı</label>
+
+        <label class="fw-bold">Ürün Stok Sayısı</label>
         <input type="text" asp-for="StockCount" class="form-control" />
         <br />
-        <label>Ürün Kategori</label>
+
+        <label class="fw-bold">Ürün Kategori</label>
         <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.v">
             <option value="">-- Kategori Seçin --</option>
         </select>
         <br />
-        <button class="btn btn-info">Ürünü Ekle</button>
+
+        <button class="btn-submit">Ürünü Ekle</button>
+
     </form>
 </div>

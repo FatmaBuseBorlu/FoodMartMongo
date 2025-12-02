@@ -1,28 +1,109 @@
 ﻿@model List<FoodMartMongo.Dtos.CategoryDtos.ResultCategoryDto>
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container">
-    <br></br>
-    <table class="table table-bordered">
-        <tr>
-            <th>#</th>
-            <th>Kategori Adı</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-        </tr>
-        @foreach(var item in Model)
-        {
-            <tr>
-                <td>@item.CategoryId</td>
-                <td>@item.CategoryName</td>
-                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
-            </tr>
+<style>
+    /* 🟦 Başlık kutusu */
+    .page-header-box {
+        background-color: #cfe2ff;
+        padding: 14px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        color: #084298;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    /* 🟦 Tablo stil (ürün listesi ile aynı) */
+    .table thead th {
+        background-color: #e9ecef;
+        color: #495057;
+        border-color: #ced4da;
+        font-weight: 600;
+    }
+
+    .table td {
+        vertical-align: middle;
+        border-color: #ced4da;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    /* 🔴 Sil butonu */
+    .btn-delete {
+        background-color: #f8d7da;
+        border-color: #f5c2c7;
+        color: #842029;
+    }
+
+        .btn-delete:hover {
+            background-color: #e7b5b9;
+            border-color: #e7b5b9;
+            color: #6a1a21;
         }
+
+    /* 🟢 Güncelle butonu */
+    .btn-update {
+        background-color: #a3cfbb;
+        border-color: #8cc3ab;
+        color: #0f5132;
+    }
+
+        .btn-update:hover {
+            background-color: #83bea4;
+            border-color: #83bea4;
+            color: #0a3622;
+        }
+
+    .btn-new {
+        background-color: #9ec5fe;
+        border-color: #9ec5fe;
+        color: #002c6b;
+        font-weight: 600;
+    }
+
+        .btn-new:hover {
+            background-color: #6ea8fe;
+            border-color: #6ea8fe;
+            color: white;
+        }
+</style>
+
+<div class="container">
+
+    <div class="page-header-box">
+        Kategori Listesi
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Kategori Adı</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CategoryName</td>
+                    <td>
+                        <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-sm btn-delete">Sil</a>
+                    </td>
+                    <td>
+                        <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-sm btn-update">Güncelle</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
-    <a href="/Category/CreateCategory/" class="btn btn-primary">Yeni Kategori Girişi</a>
+
+    <a href="/Category/CreateCategory/" class="btn btn-new">Yeni Kategori Girişi</a>
 </div>

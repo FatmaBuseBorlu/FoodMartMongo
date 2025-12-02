@@ -1,18 +1,46 @@
 ﻿@model FoodMartMongo.Dtos.CategoryDtos.CreateCategoryDto
 
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+<style>
+    .category-header {
+        background-color: #cfe2ff;
+        color: #084298;
+        padding: 15px;
+        border-radius: 6px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .btn-category {
+        background-color: #9ec5fe;
+        border-color: #9ec5fe;
+        color: #003f88;
+        font-weight: 600;
+    }
+
+        .btn-category:hover {
+            background-color: #6ea8fe;
+            border-color: #6ea8fe;
+            color: white;
+        }
+</style>
+
 <div class="container">
     <br /><br />
-    <h3 class="alert alert-primary">Yeni Kategori Ekleme Sayfası</h3>
+
+    <h3 class="category-header">Yeni Kategori Ekleme Sayfası</h3>
+
     <form method="post">
+
         <label>Kategori Adı</label>
         <input type="text" asp-for="CategoryName" class="form-control" />
         <br />
-        <button class="btn btn-info">Kategoriyi Ekle</button>
+
+        <button class="btn btn-category">Kategoriyi Ekle</button>
     </form>
 </div>

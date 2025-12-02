@@ -1,34 +1,119 @@
 ﻿@model List<FoodMartMongo.Dtos.ProductDtos.ResultProductDto>
 
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container">
-    <br /><br />
-    <table class="table table-bordered">
-        <tr>
-            <th>#</th>
-            <th>Ürün Adı</th>
-            <th>Ürün Stok</th>
-            <th>Ürün Fiyatı</th>
-            <th>Ürün Kategorisi</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.ProductId</td>
-                <td>@item.Name</td>
-                <td>@item.StockCount</td>
-                <td>@item.Price</td>
-                <td>@item.CategoryId</td>
-                <td><a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-success">Güncelle</a></td>
-            </tr>
+<style>
+    /* Başlık barı */
+    .page-title-box {
+        background: #d1e7dd;
+        border: 1px solid #a3cfbb;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 25px;
+        color: #0f5132;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    /* Tablo */
+    .custom-table {
+        background: #fcfcfd;
+        border: 1px solid #a3cfbb;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 0 3px #a3cfbb;inset;
+    }
+
+        .custom-table thead {
+            background: #d1e7dd;
+            color: #0f5132;
+            font-weight: 600;
         }
+
+        .custom-table th,
+        .custom-table td {
+            border-color: #a3cfbb !important;
+            vertical-align: middle;
+        }
+
+    /* Sil - Güncelle butonları */
+    .btn-delete {
+        background: #f8d7da;
+        border: 1px solid #dc3545;
+        color: #842029;
+    }
+
+        .btn-delete:hover {
+            background: #f1b0b7;
+            color: #6a1b23;
+        }
+
+    .btn-update {
+        background: #d1e7dd;
+        border: 1px solid #198754;
+        color: #0f5132;
+    }
+
+        .btn-update:hover {
+            background: #bcd7cc;
+            color: #0a3622;
+        }
+
+    /* Yeni Ürün Ekle butonu */
+    .btn-new {
+        background: #a3cfbb;
+        border: 1px solid #0f5132;
+        color: #0f5132;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 8px 14px;
+    }
+
+        .btn-new:hover {
+            background: #8ec0ab;
+            color: #0a3622;
+        }
+</style>
+
+<div class="container mt-4">
+
+    <div class="page-title-box">
+        Ürün Listesi
+    </div>
+
+    <table class="table custom-table table-bordered">
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Ürün Stok</th>
+                <th>Ürün Fiyatı</th>
+                <th>Ürün Kategorisi</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.StockCount</td>
+                    <td>@item.Price</td>
+                    <td>@item.CategoryId</td>
+
+                    <td>
+                        <a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-delete btn-sm">Sil</a>
+                    </td>
+                    <td>
+                        <a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-update btn-sm">Güncelle</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
-    <a href="/Product/CreateProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+
+    <a href="/Product/CreateProduct/" class="btn-new">+ Yeni Ürün Girişi</a>
 </div>

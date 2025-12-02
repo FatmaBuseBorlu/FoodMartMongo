@@ -11,42 +11,51 @@
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CUSTOM STYLE -->
     <style>
         body {
             background: #f5f6fa;
             font-family: 'Nunito', sans-serif;
         }
 
+        /* Sidebar görünmez - arka planla aynı */
         .admin-sidebar {
             width: 250px;
-            background: #1f2937;
-            color: #fff;
+            background: #ffffff; /* panel arka planıyla aynı renk */
+            color: #0b213f;
             min-height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
             padding-top: 70px;
+            border-right: none; /* çizgi yok */
+            box-shadow: none !important;
         }
 
+            /* Sidebar linkleri: çizgi yok, tamamen düz */
             .admin-sidebar a {
-                color: #e5e7eb;
+                color: #0b213f;
                 padding: 14px 20px;
                 display: block;
-                border-bottom: 1px solid #374151;
                 text-decoration: none;
-                font-size: 15px;
+                border-bottom: none; /* çizgi kaldırıldı */
+                background: transparent;
             }
 
+                /* Hover efekti: çok hafif */
                 .admin-sidebar a:hover {
-                    background: #374151;
-                    color: #fff;
+                    background: #d6e6ff; /* çok çok soft bir hover */
+                    color: #000;
                 }
 
+
+        /* Topbar zaten mükemmel, dokunmuyoruz */
+
+
+        /* ⭐️ YENİ SOFT TOPBAR */
         .admin-topbar {
             height: 70px;
-            background: #111827;
-            color: white;
+            background: #9ec5fe; /* Pastel mavi */
+            color: #0a2a47;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -54,8 +63,11 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
+            border-bottom: 3px solid #6ea8fe;
+            font-weight: 700;
         }
 
+        /* İçerik */
         .admin-content {
             margin-left: 260px;
             padding: 100px 30px 40px;
@@ -68,7 +80,7 @@
     <div class="admin-topbar">
         <div class="fw-bold fs-5">FoodMart <span style="color:#facc15">AdminPanel</span></div>
         <div>
-            <a href="/" class="btn btn-sm btn-danger">Çıkış</a>
+            <a href="/" class="btn btn-sm btn-outline-dark">Çıkış</a>
         </div>
     </div>
 
@@ -79,7 +91,6 @@
         <a href="/Product/ProductList"><i class="fa fa-box me-2"></i> Ürünler</a>
         <a href="/Category/CreateCategory"><i class="fa fa-plus"></i> Kategori Ekle</a>
         <a href="/Category/CategoryList"><i class="fa fa-list me-2"></i> Kategoriler</a>
-        <a href="/Feature/FeatureList"><i class="fa fa-star me-2"></i> Öne Çıkanlar</a>
     </div>
 
     <!-- CONTENT -->
