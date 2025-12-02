@@ -50,25 +50,31 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 
 ## 📸 Proje Arayüzü ve Özellikler
 
-Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
+<p>Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:</p>
 
 <div align="center">
 
   <h3>🛒 Vitrin (Müşteri Arayüzü)</h3>
   <p>Kullanıcıların ürünleri incelediği, dinamik slider ve kategori alanlarına sahip ana sayfa.</p>
-  <img src="ımages/Home.png" width="100%" style="max-width: 800px;" alt="Ana Sayfa Görünümü">
+  <img src="images/Home.png"
+       alt="Ana Sayfa Görünümü"
+       style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
 
-  <h3>🛍️ Ürün Detay & Sepet</h3>
+  <h3>🛍️ Ürün Detay &amp; Sepet</h3>
   <p>Hızlı sepete ekleme, detaylı ürün inceleme ve dinamik sepet yönetimi.</p>
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/AllProduct.png" width="100%" alt="Ürün Listesi">
+        <img src="images/AllProduct.png"
+             alt="Ürün Listesi"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Listeleme</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/MostPopulerProduct.png" width="100%" alt="Popüler Ürünler">
+        <img src="images/MostPopulerProduct.png"
+             alt="Popüler Ürünler"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Popüler Ürünler Vitrini</i>
       </td>
     </tr>
@@ -78,19 +84,25 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <h3>🔐 Yönetici Paneli (Admin Dashboard)</h3>
   <p>Spike Tailwind teması ile güçlendirilmiş, modern ve responsive yönetim paneli.</p>
-  <img src="ımages/AdminPanel.png" width="100%" style="max-width: 800px;" alt="Admin Paneli">
+  <img src="images/AdminPanel.png"
+       alt="Admin Paneli"
+       style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
 
-  <h3>📦 Ürün & Kategori Yönetimi</h3>
+  <h3>📦 Ürün &amp; Kategori Yönetimi</h3>
   <p>Admin panelinden kolayca ürün ekleme, güncelleme ve stok takibi işlemleri.</p>
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/CreateProduct.png" width="100%" alt="Ürün Ekleme">
+        <img src="images/CreateProduct.png"
+             alt="Ürün Ekleme"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Ekleme Formu</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/ProductList.png" width="100%" alt="Ürün Listesi">
+        <img src="images/ProductList.png"
+             alt="Ürün Listesi"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Yönetim Tablosu</i>
       </td>
     </tr>
@@ -99,11 +111,15 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/CreateCategory.png" width="100%" alt="Kategori Ekleme">
+        <img src="images/CreateCategory.png"
+             alt="Kategori Ekleme"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kategori Ekleme</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/CategoryList.png" width="100%" alt="Kategori Listesi">
+        <img src="images/CategoryList.png"
+             alt="Kategori Listesi"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kategori Yönetimi</i>
       </td>
     </tr>
@@ -111,16 +127,20 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <br><hr><br>
 
-  <h3>🔑 Güvenlik & Giriş</h3>
+  <h3>🔑 Güvenlik &amp; Giriş</h3>
   <p>MongoDB Identity altyapısı ile güvenli Admin giriş ve kayıt ekranları.</p>
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/Login1.png" width="100%" alt="Giriş Ekranı">
+        <img src="images/Login1.png"
+             alt="Giriş Ekranı"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Giriş Ekranı</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="ımages/Register1.png" width="100%" alt="Kayıt Ekranı">
+        <img src="images/Register1.png"
+             alt="Kayıt Ekranı"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kayıt Ekranı</i>
       </td>
     </tr>
@@ -128,11 +148,14 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
 
   <br><hr><br>
 
-  <h3>✉️ Bülten & İletişim</h3>
+  <h3>✉️ Bülten &amp; İletişim</h3>
   <p>Kullanıcıların mail bültenine abone olması ve otomatik indirim kodu gönderimi.</p>
-  <img src="ımages/Mail.png" width="100%" style="max-width: 800px;" alt="Bülten Alanı">
+  <img src="images/Mail.png"
+       alt="Bülten Alanı"
+       style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
-  <img src="ımages/MailMessage.png" width="100%" style="max-width: 800px;" alt="Gelen Mail Örneği">
+  <img src="images/MailMessage.png"
+       alt="Gelen Mail Örneği"
+       style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
 
 </div>
-
