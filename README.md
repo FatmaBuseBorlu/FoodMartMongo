@@ -67,7 +67,7 @@ Uygulamanın müşteri tarafı vitrini, yönetici paneli ve mail entegrasyonu il
   <img src="ımages/AllProduct.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
   <br><i>Ürün Listeleme</i>
   <br><br>
-  <img src="ımages/AllProduct1.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
+  <img src="ımages/AllProduct2.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
   <br><i>Ürün Listeleme</i>
   <br><br>
     <img src="ımages/MostPopulerProduct.png" width="100%" style="max-width: 800px;" alt="Popüler Ürünler">
