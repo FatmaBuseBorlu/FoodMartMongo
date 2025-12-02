@@ -1,6 +1,5 @@
-# 🛒 FoodMart - ASP.NET Core & MongoDB E-Ticaret Projesi
+# 🛒 FoodMart -MongoDB E-Ticaret Projesi
 
-![FoodMart Banner](https://via.placeholder.com/1000x300?text=FoodMart+Project+Banner)
 
 **FoodMart**, modern web teknolojileri kullanılarak geliştirilmiş, **MongoDB** tabanlı dinamik bir e-ticaret (Süpermarket) uygulamasıdır. **ASP.NET Core MVC** mimarisi üzerine inşa edilmiş olup, katmanlı mimari prensiplerine uygun olarak **Admin Paneli** ve **Vitrin (UI)** tarafını birbirinden ayırır.
 
@@ -26,19 +25,26 @@ Bu proje, statik bir HTML temasını dinamik, veritabanı destekli ve yönetileb
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## 🛠️ Mimari ve Kullanılan Teknolojiler
 
-| Kategori | Teknoloji |
-|----------|-----------|
-| **Backend** | ASP.NET Core 6.0 / 8.0 (MVC) |
-| **Veritabanı** | MongoDB (NoSQL) |
-| **ORM / Sürücü** | MongoDB.Driver |
-| **Kimlik Doğrulama** | AspNetCore.Identity.MongoDbCore |
-| **Nesne Eşleme** | AutoMapper |
-| **Mail Gönderimi** | MailKit (SMTP) |
-| **Frontend (Vitrin)** | Bootstrap 5, SwiperJS, HTML5, CSS3 |
-| **Frontend (Admin)** | Spike Tailwind CSS Admin Template |
-| **Mimari** | N-Tier Architecture (Entity, DTO, Service, Controller Layers) |
+Projenin altyapısı, performans, ölçeklenebilirlik ve temiz kod prensipleri gözetilerek oluşturulmuştur. Aşağıda projede kullanılan temel teknolojiler ve kullanım amaçları detaylandırılmıştır:
+
+### 🖥️ Backend (Sunucu Tarafı)
+Projenin temelinde, Microsoft'un açık kaynaklı ve çapraz platform destekli **ASP.NET Core MVC (6.0/8.0)** framework'ü yer almaktadır. Kodun sürdürülebilirliğini sağlamak adına **N-Tier (Katmanlı Mimari)** yapısı benimsenmiş; Entity, Data Access, Business ve UI katmanları mantıksal olarak ayrılmıştır.
+
+### 🗄️ Veritabanı (Database)
+Klasik ilişkisel veritabanları yerine, büyük veri yönetimi ve esnek şema yapısı sunan NoSQL teknolojisi **MongoDB** tercih edilmiştir. Veritabanı ile iletişim, **MongoDB.Driver** kütüphanesi üzerinden sağlanmaktadır.
+
+### 🔐 Güvenlik ve Kimlik Doğrulama
+Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.MongoDbCore** kütüphanesi entegre edilmiştir. Bu sayede, Identity mekanizmasının sağladığı güçlü güvenlik özellikleri (Login, Register, Role Management) MongoDB üzerinde sorunsuz çalışmaktadır.
+
+### 🎨 Frontend (Arayüz)
+* **Müşteri Tarafı:** Kullanıcı dostu ve mobil uyumlu bir deneyim için **Bootstrap 5** grid sistemi, **HTML5** ve **CSS3** kullanılmıştır. Ürün kaydırma efektleri için **SwiperJS** kütüphanesinden yararlanılmıştır.
+* **Admin Tarafı:** Yönetim panelinde modern ve şık bir görünüm elde etmek için **Tailwind CSS** tabanlı **Spike Admin Template** projeye entegre edilmiştir.
+
+### 🔧 Yardımcı Araçlar ve Kütüphaneler
+* **AutoMapper:** Entity ve DTO (Data Transfer Object) nesneleri arasındaki veri transferini otomatikleştirmek için kullanılmıştır.
+* **MailKit:** Bülten aboneliği gibi e-posta gönderim işlemleri için .NET'in en güçlü mail kütüphanesi olan MailKit (SMTP) tercih edilmiştir.
 
 ---
 
@@ -96,13 +102,3 @@ Uygulamanın modern ve kullanıcı dostu arayüzünden kareler:
   <img src="Görseller/Newsletter.png" width="800" alt="Bülten Alanı">
 
 </div>
-
----
-
-## ⚙️ Kurulum ve Çalıştırma
-
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
-
-### 1. Projeyi Klonlayın
-```bash
-git clone [https://github.com/kullaniciadiniz/foodmart-mongo.git](https://github.com/kullaniciadiniz/foodmart-mongo.git)
