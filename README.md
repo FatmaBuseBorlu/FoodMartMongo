@@ -56,7 +56,7 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 
   <h3>🛒 Vitrin (Müşteri Arayüzü)</h3>
   <p>Kullanıcıların ürünleri incelediği, dinamik slider ve kategori alanlarına sahip ana sayfa.</p>
-  <img src="images/Home.png"
+  <img src="ımages/Home.png"
        alt="Ana Sayfa Görünümü"
        style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
@@ -66,13 +66,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="images/AllProduct.png"
+        <img src="ımages/AllProduct.png"
              alt="Ürün Listesi"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Listeleme</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="images/MostPopulerProduct.png"
+        <img src="ımages/MostPopulerProduct.png"
              alt="Popüler Ürünler"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Popüler Ürünler Vitrini</i>
@@ -84,7 +84,7 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 
   <h3>🔐 Yönetici Paneli (Admin Dashboard)</h3>
   <p>Spike Tailwind teması ile güçlendirilmiş, modern ve responsive yönetim paneli.</p>
-  <img src="images/AdminPanel.png"
+  <img src="ımages/AdminPanel.png"
        alt="Admin Paneli"
        style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
@@ -94,13 +94,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="images/CreateProduct.png"
+        <img src="ımages/CreateProduct.png"
              alt="Ürün Ekleme"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Ekleme Formu</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="images/ProductList.png"
+        <img src="ımages/ProductList.png"
              alt="Ürün Listesi"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Ürün Yönetim Tablosu</i>
@@ -111,13 +111,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="images/CreateCategory.png"
+        <img src="ımages/CreateCategory.png"
              alt="Kategori Ekleme"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kategori Ekleme</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="images/CategoryList.png"
+        <img src="ımages/CategoryList.png"
              alt="Kategori Listesi"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kategori Yönetimi</i>
@@ -132,13 +132,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table align="center" width="100%" border="0">
     <tr>
       <td width="50%" valign="top" align="center">
-        <img src="images/Login1.png"
+        <img src="ımages/Login1.png"
              alt="Giriş Ekranı"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Giriş Ekranı</i>
       </td>
       <td width="50%" valign="top" align="center">
-        <img src="images/Register1.png"
+        <img src="ımages/Register1.png"
              alt="Kayıt Ekranı"
              style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <br><i>Kayıt Ekranı</i>
@@ -150,11 +150,11 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 
   <h3>✉️ Bülten &amp; İletişim</h3>
   <p>Kullanıcıların mail bültenine abone olması ve otomatik indirim kodu gönderimi.</p>
-  <img src="images/Mail.png"
+  <img src="ımages/Mail.png"
        alt="Bülten Alanı"
        style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
   <br><br>
-  <img src="images/MailMessage.png"
+  <img src="ımages/MailMessage.png"
        alt="Gelen Mail Örneği"
        style="width:100%; max-width:800px; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
 
