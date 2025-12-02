@@ -153,22 +153,26 @@
                         <p>FoodMart ailesine katılın! Adınızı ve e-posta adresinizi bırakın, ilk alışverişinize özel %25 indirim kodunuzu anında gönderelim. Taze ürünler, avantajlı fiyatlar sizi bekliyor.</p>
                     </div>
                     <div class="col-md-6 p-5">
-                        <form>
+
+                        <form method="post" action="/Mail/Subscribe">
+
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text"
-                                       class="form-control form-control-lg" name="name" id="name" placeholder="Name">
+                                <label for="name" class="form-label">Adınız Soyadınız</label>
+                                <input type="text" class="form-control form-control-lg" name="Name" id="name" placeholder="Adınız">
                             </div>
+
                             <div class="mb-3">
-                                <label for="" class="form-label">E-Posta Adresiniz</label>
-                                <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="name@foodmart.com">
+                                <label for="email" class="form-label">E-Posta Adresiniz</label>
+                                <input type="email" class="form-control form-control-lg" name="Email" id="email" placeholder="mail@adresiniz.com" required>
                             </div>
+
                             <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="checkbox" id="subscribe" value="subscribe" checked>
                                 <label class="form-check-label" for="subscribe">
-                                    <input class="form-check-input" type="checkbox" id="subscribe" value="subscribe">
                                     Bültene abone olmak istiyorum
                                 </label>
                             </div>
+
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-dark btn-lg">Gönder & İndirimi Kap</button>
                             </div>

@@ -16,13 +16,21 @@ namespace FoodMart.Controllers
         [HttpPost]
         public async Task<IActionResult> Subscribe(string Email)
         {
-            if (!string.IsNullOrEmpty(Email))
+            if (string.IsNullOrEmpty(Email))
             {
-                await _mailService.SendDiscountCodeAsync(Email);
-                return RedirectToAction("Index", "Home");
+                return Content("Hata: Email adresi boş geldi! HTML'deki name='Email' kısmını kontrol et.");
             }
 
-            return RedirectToAction("Index", "Home");
+            try
+            {
+                await _mailService.SendDiscountCodeAsync(Email);
+                return Content("Başarılı! Mail gönderildi. Spam kutunu kontrol et.");
+            }
+            catch (Exception ex)
+            {
+                // Hatanın ne olduğunu ekrana basar
+                return Content("Mail Gönderme Hatası: " + ex.Message);
+            }
         }
     }
 }
