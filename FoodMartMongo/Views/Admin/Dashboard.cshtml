@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Admin Paneli";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="mb-4">Hoşgeldin, Yönetici! </h2>
+                <p class="text-muted">Sol taraftaki menüden Ürün, Kategori ve Slider yönetimini yapabilirsin.</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="alert alert-primary">
+                            <h4>Ürün Yönetimi</h4>
+                            <a href="/Product/ProductList" class="btn btn-sm btn-primary mt-2">Listeye Git</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="alert alert-success">
+                            <h4>Kategori Yönetimi</h4>
+                            <a href="/Category/CategoryList" class="btn btn-sm btn-success mt-2">Listeye Git</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="alert alert-warning">
+                            <h4>Siteye Git</h4>
+                            <a href="/" target="_blank" class="btn btn-sm btn-warning mt-2">Önizle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

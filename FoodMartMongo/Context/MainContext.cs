@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FoodMartMongo.Context
 {
-    public class MainContext : IdentityDbContext<AppUser>
+    public class MainContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
