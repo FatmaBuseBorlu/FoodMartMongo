@@ -28,7 +28,6 @@ namespace FoodMart.Controllers
             }
             catch (Exception ex)
             {
-                // Hatanın ne olduğunu ekrana basar
                 return Content("Mail Gönderme Hatası: " + ex.Message);
             }
         }

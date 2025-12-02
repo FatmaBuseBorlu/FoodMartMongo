@@ -13,14 +13,12 @@ namespace FoodMart.Controllers
             _featureService = featureService;
         }
 
-        // Listeleme Sayfası (Eklediklerimizi görmek için)
         public async Task<IActionResult> Index()
         {
             var values = await _featureService.GetAllFeatureAsync();
             return View(values);
         }
 
-        // Ekleme Sayfası (Veri girmek için)
         [HttpGet]
         public IActionResult CreateFeature()
         {
@@ -34,7 +32,6 @@ namespace FoodMart.Controllers
             return RedirectToAction("Index");
         }
 
-        // Silme İşlemi
         public async Task<IActionResult> DeleteFeature(string id)
         {
             await _featureService.DeleteFeatureAsync(id);

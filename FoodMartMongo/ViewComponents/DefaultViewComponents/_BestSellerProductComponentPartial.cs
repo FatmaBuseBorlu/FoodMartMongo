@@ -14,7 +14,6 @@ namespace FoodMart.ViewComponents.DefaultViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            // En ucuz 6 ürünü servisten iste
             var values = await _productService.GetCheapestProductsAsync();
             return View(values);
         }
