@@ -60,13 +60,27 @@ Uygulamanın müşteri tarafı vitrini, yönetici paneli ve mail entegrasyonu il
 
   <h3>🛍️ Ürün Detay & Sepet</h3>
   <p>Hızlı sepete ekleme, detaylı ürün inceleme ve dinamik sepet yönetimi.</p>
-
+  
+   <img src="ımages/Category.png" width="100%" style="max-width: 800px;" alt="Kategoriler">
+  <br><i>Kategoriler</i>
+  <br><br>
   <img src="ımages/AllProduct.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
   <br><i>Ürün Listeleme</i>
   <br><br>
-
-  <img src="ımages/MostPopulerProduct.png" width="100%" style="max-width: 800px;" alt="Popüler Ürünler">
+  <img src="ımages/AllProduct1.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
+  <br><i>Popüler Ürün Listeleme</i>
+  <br><br>
+    <img src="ımages/MostPopulerProduct.png" width="100%" style="max-width: 800px;" alt="Popüler Ürünler">
   <br><i>Popüler Ürünler Vitrini</i>
+  <br><br>
+    <img src="ımages/LowestProducts.png" width="100%" style="max-width: 800px;" alt="İndirimli Ürünler">
+  <br><i>İndirimli Ürünler Vitrini</i>
+  <br><br>
+      <img src="ımages/Sales.png" width="100%" style="max-width: 800px;" alt="İndirimli Ürünler">
+  <br><i>İndirimli Ürünler Vitrini</i>
+  <br><br>
+        <img src="ımages/PeopleSearch.png" width="100%" style="max-width: 800px;" alt="Bunlara da göz atın">
+  <br><i>Aranan Ürünler</i>
   <br><br>
 
   <hr><br>
