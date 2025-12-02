@@ -55,7 +55,7 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 </p>
 
 <p align="center">
-  <img src="images/Home.png"
+  <img src="ımages/Home.png"
        alt="Ana Sayfa Görünümü"
        style="max-width: 800px; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;">
 </p>
@@ -72,13 +72,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table width="100%">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="images/AllProduct.png"
+        <img src="ımages/AllProduct.png"
              alt="Ürün Listeleme"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Ürün Listeleme</i>
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="images/MostPopulerProduct.png"
+        <img src="ımages/MostPopulerProduct.png"
              alt="Popüler Ürünler Vitrini"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Popüler Ürünler Vitrini</i>
@@ -96,7 +96,7 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 </p>
 
 <p align="center">
-  <img src="images/AdminPanel.png"
+  <img src="ımages/AdminPanel.png"
        alt="Admin Paneli"
        style="max-width: 800px; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;">
 </p>
@@ -113,13 +113,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table width="100%">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="images/ProductList.png"
+        <img src="ımages/ProductList.png"
              alt="Ürün Yönetim Tablosu"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Ürün Yönetim Tablosu</i>
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="images/CategoryList.png"
+        <img src="ımages/CategoryList.png"
              alt="Kategori Yönetimi"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Kategori Yönetimi</i>
@@ -132,13 +132,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table width="100%">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="images/CreateProduct.png"
+        <img src="ımages/CreateProduct.png"
              alt="Ürün Ekleme Formu"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Ürün Ekleme Formu</i>
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="images/CreateCategory.png"
+        <img src="ımages/CreateCategory.png"
              alt="Kategori Ekleme Formu"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Kategori Ekleme Formu</i>
@@ -159,13 +159,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
   <table width="100%">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="images/Login1.png"
+        <img src="ımages/Login1.png"
              alt="Giriş Ekranı"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Giriş Ekranı</i>
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="images/Register1.png"
+        <img src="ımages/Register1.png"
              alt="Kayıt Ekranı"
              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"><br>
         <i>Kayıt Ekranı</i>
@@ -183,13 +183,13 @@ Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.Mo
 </p>
 
 <p align="center">
-  <img src="images/Mail.png"
+  <img src="ımages/Mail.png"
        alt="Bülten Alanı"
        style="max-width: 800px; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;">
 </p>
 
 <p align="center">
-  <img src="images/MailMessage.png"
+  <img src="ımages/MailMessage.png"
        alt="Gönderilen Mail Örneği"
        style="max-width: 800px; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;">
 </p>
