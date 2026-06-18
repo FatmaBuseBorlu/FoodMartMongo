@@ -1,136 +1,245 @@
-# 🛒 FoodMart -MongoDB E-Ticaret Projesi
+# FoodMartMongo
 
+FoodMartMongo is an ASP.NET Core MVC supermarket/e-commerce application built with MongoDB. It turns a static FoodMart-style UI template into a dynamic, database-driven web application with customer-facing pages and admin-oriented management screens.
 
-**FoodMart**, modern web teknolojileri kullanılarak geliştirilmiş, **MongoDB** tabanlı dinamik bir e-ticaret (Süpermarket) uygulamasıdır. **ASP.NET Core MVC** mimarisi üzerine inşa edilmiş olup, katmanlı mimari prensiplerine uygun olarak **Admin Paneli** ve **Vitrin (UI)** tarafını birbirinden ayırır.
+The project demonstrates MongoDB usage in a .NET MVC application, service-based structure, DTO usage, AutoMapper, ViewComponents, admin panel screens, and SMTP-based newsletter discount email flow.
 
-Bu proje, statik bir HTML temasını dinamik, veritabanı destekli ve yönetilebilir bir web uygulamasına dönüştürme sürecini kapsar.
+## Features
 
----
+### Customer UI
 
-## 🚀 Temel Özellikler
+- Dynamic homepage content
+- Dynamic category listing
+- Product listing by categories
+- Popular, trending, discounted, and best seller product sections
+- Reusable ViewComponents for homepage sections
+- Newsletter subscription flow
+- Discount code email sending with SMTP/MailKit
+- Responsive supermarket-style UI
 
-### Müşteri Arayüzü (Vitrin)
-* **Dinamik Ana Sayfa:** Slider, Kategoriler ve Ürünler veritabanından (MongoDB) anlık çekilir.
-* **ViewComponent Mimarisi:** Sayfa parçaları (Trend Ürünler, En Çok Satanlar, Etiketler) bağımsız ve tekrar kullanılabilir bileşenler olarak tasarlanmıştır.
-* **Gelişmiş Ürün Listeleme:** Kategorilere göre filtreleme veya tüm ürünleri listeleme.
-* **Bülten Aboneliği:** Kullanıcı mail adresiyle abone olduğunda **SMTP (MailKit)** üzerinden otomatik %25 indirim kuponu gönderilir.
+### Admin / Management Screens
 
-### Yönetim Paneli (Admin)
-* **Güvenli Giriş Sistemi:** `AspNetCore.Identity.MongoDbCore` ile güvenli Admin Login/Register işlemleri.
-* **CRUD İşlemleri:**
-    * **Ürün Yönetimi:** Ürün ekle, sil, güncelle, listele.
-    * **Kategori Yönetimi:** Kategori işlemleri.
-    * **Slider & Özellikler:** Ana sayfa manşet ve "İnsanlar Bunları Arıyor" etiketlerinin yönetimi.
-* **Modern Admin Teması:** **Spike Tailwind CSS Admin Template** entegrasyonu ile şık ve kullanıcı dostu panel.
+- Admin dashboard page
+- Product CRUD operations
+- Category CRUD operations
+- Feature/slider content management
+- Tailwind-based admin panel template integration
 
----
+## Tech Stack
 
-## 🛠️ Mimari ve Kullanılan Teknolojiler
+- ASP.NET Core MVC 8.0
+- C#
+- MongoDB
+- MongoDB.Driver
+- DTO pattern
+- Service layer structure
+- AutoMapper
+- MailKit / SMTP
+- Razor Views
+- ViewComponents
+- HTML5, CSS3, Bootstrap
+- Tailwind-based admin template
 
-Projenin altyapısı, performans, ölçeklenebilirlik ve temiz kod prensipleri gözetilerek oluşturulmuştur. Aşağıda projede kullanılan temel teknolojiler ve kullanım amaçları detaylandırılmıştır:
+## Project Structure
 
-### Backend (Sunucu Tarafı)
-Projenin temelinde, Microsoft'un açık kaynaklı ve çapraz platform destekli **ASP.NET Core MVC (6.0/8.0)** framework'ü yer almaktadır. Kodun sürdürülebilirliğini sağlamak adına **N-Tier (Katmanlı Mimari)** yapısı benimsenmiş; Entity, Data Access, Business ve UI katmanları mantıksal olarak ayrılmıştır.
+```text
+FoodMartMongo/
+├── FoodMartMongo.sln
+├── FoodMartMongo/
+│   ├── Controllers/
+│   ├── Dtos/
+│   ├── Entities/
+│   ├── Mapping/
+│   ├── Services/
+│   ├── Settings/
+│   ├── ViewComponents/
+│   ├── Views/
+│   ├── wwwroot/
+│   ├── Program.cs
+│   ├── appsettings.json
+│   └── FoodMartMongo.csproj
+├── ımages/
+└── README.md
+```
 
-### Veritabanı (Database)
-Klasik ilişkisel veritabanları yerine, büyük veri yönetimi ve esnek şema yapısı sunan NoSQL teknolojisi **MongoDB** tercih edilmiştir. Veritabanı ile iletişim, **MongoDB.Driver** kütüphanesi üzerinden sağlanmaktadır.
+## Requirements
 
-### Güvenlik ve Kimlik Doğrulama
-Kullanıcı yönetimi ve admin paneli güvenliği için **AspNetCore.Identity.MongoDbCore** kütüphanesi entegre edilmiştir. Bu sayede, Identity mekanizmasının sağladığı güçlü güvenlik özellikleri (Login, Register, Role Management) MongoDB üzerinde sorunsuz çalışmaktadır.
+Before running the project, make sure the following tools are installed:
 
-### Frontend (Arayüz)
-* **Müşteri Tarafı:** Kullanıcı dostu ve mobil uyumlu bir deneyim için **Bootstrap 5** grid sistemi, **HTML5** ve **CSS3** kullanılmıştır. Ürün kaydırma efektleri için **SwiperJS** kütüphanesinden yararlanılmıştır.
-* **Admin Tarafı:** Yönetim panelinde modern ve şık bir görünüm elde etmek için **Tailwind CSS** tabanlı **Spike Admin Template** projeye entegre edilmiştir.
+- .NET 8 SDK
+- MongoDB Community Server or Docker
+- Visual Studio 2022 or Visual Studio Code
+- Optional: MongoDB Compass for viewing collections
 
-### Yardımcı Araçlar ve Kütüphaneler
-* **AutoMapper:** Entity ve DTO (Data Transfer Object) nesneleri arasındaki veri transferini otomatikleştirmek için kullanılmıştır.
-* **MailKit:** Bülten aboneliği gibi e-posta gönderim işlemleri için .NET'in en güçlü mail kütüphanesi olan MailKit (SMTP) tercih edilmiştir.
+## Configuration
 
----
+MongoDB settings are defined in:
 
-## 📸 Proje Arayüzü ve Özellikler
-Uygulamanın müşteri tarafı vitrini, yönetici paneli ve mail entegrasyonu ile ilgili temel görüntüleri aşağıda listelenmiştir.
+```text
+FoodMartMongo/appsettings.json
+```
+
+Default MongoDB configuration:
+
+```json
+"DatabaseSettingsKey": {
+  "ConnectionString": "mongodb://localhost:27017",
+  "DatabaseName": "FoodMartDB",
+  "CategoryCollectionName": "Categories",
+  "ProductCollectionName": "Products",
+  "CustomerCollectionName": "Customers",
+  "DiscountCollectionName": "Discounts",
+  "SliderCollectionName": "Sliders",
+  "FeatureCollectionName": "Features"
+}
+```
+
+If MongoDB runs locally on the default port, this configuration works as-is.
+
+## Running MongoDB with Docker
+
+If you do not have MongoDB installed locally, you can run it with Docker:
+
+```bash
+docker run --name foodmart-mongo -p 27017:27017 -d mongo:7
+```
+
+Check that the container is running:
+
+```bash
+docker ps
+```
+
+## Mail Settings
+
+The newsletter feature sends a discount code using SMTP. The repository contains placeholder mail values in `appsettings.json`.
+
+For local testing, use .NET user secrets instead of committing real credentials:
+
+```bash
+dotnet user-secrets init --project FoodMartMongo/FoodMartMongo.csproj
+```
+
+Set SMTP values:
+
+```bash
+dotnet user-secrets set "MailSettings:Mail" "your-email@example.com" --project FoodMartMongo/FoodMartMongo.csproj
+dotnet user-secrets set "MailSettings:Password" "your-app-password" --project FoodMartMongo/FoodMartMongo.csproj
+dotnet user-secrets set "MailSettings:DisplayName" "FoodMart Discount" --project FoodMartMongo/FoodMartMongo.csproj
+dotnet user-secrets set "MailSettings:Host" "smtp.gmail.com" --project FoodMartMongo/FoodMartMongo.csproj
+dotnet user-secrets set "MailSettings:Port" "587" --project FoodMartMongo/FoodMartMongo.csproj
+```
+
+If you do not configure SMTP credentials, avoid testing the newsletter email send action.
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/FatmaBuseBorlu/FoodMartMongo.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd FoodMartMongo
+```
+
+Restore dependencies:
+
+```bash
+dotnet restore
+```
+
+Make sure MongoDB is running, then run the application:
+
+```bash
+dotnet run --project FoodMartMongo/FoodMartMongo.csproj
+```
+
+Open the application in your browser using the localhost URL shown in the terminal.
+
+## Main Routes
+
+```text
+/Home/Index              Customer-facing homepage
+/Admin/Dashboard         Admin dashboard
+/Category/CategoryList   Category management
+/Product/ProductList     Product management
+/Feature/FeatureList     Feature/slider management
+```
+
+## Usage Flow
+
+1. Start MongoDB locally or with Docker.
+2. Run the ASP.NET Core application.
+3. Open the admin routes and create categories.
+4. Add products and connect them to categories.
+5. Return to the homepage to see dynamic content rendered from MongoDB.
+6. Optionally configure SMTP credentials and test newsletter discount email sending.
+
+## Screenshots
+
+### Customer Homepage
 
 <div align="center">
-
-  <h3>🛒 Vitrin (Müşteri Arayüzü)</h3>
-  <p>Kullanıcıların ürünleri incelediği, dinamik slider ve kategori alanlarına sahip ana sayfa.</p>
-  <img src="ımages/Home.png" width="100%" style="max-width: 800px;" alt="Ana Sayfa Görünümü">
-  <br><br>
-
-  <h3>🛍️ Ürün Detay & Sepet</h3>
-  <p>Hızlı sepete ekleme, detaylı ürün inceleme ve dinamik sepet yönetimi.</p>
-  
-   <img src="ımages/Category.png" width="100%" style="max-width: 800px;" alt="Kategoriler">
-  <br><i>Kategoriler</i>
-  <br><br>
-  <img src="ımages/AllProduct.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
-  <br><i>Ürün Listeleme</i>
-  <br><br>
-  <img src="ımages/AllProduct2.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
-  <br><i>Ürün Listeleme</i>
-  <br><br>
-    <img src="ımages/MostPopulerProduct.png" width="100%" style="max-width: 800px;" alt="Popüler Ürünler">
-  <br><i>Popüler Ürünler Vitrini</i>
-  <br><br>
-    <img src="ımages/LowestProducts.png" width="100%" style="max-width: 800px;" alt="İndirimli Ürünler">
-  <br><i>İndirimli Ürünler Vitrini</i>
-  <br><br>
-      <img src="ımages/Sales.png" width="100%" style="max-width: 800px;" alt="İndirimli Ürünler">
-  <br><i>İndirimli Ürünler Vitrini</i>
-  <br><br>
-        <img src="ımages/PeopleSearch.png" width="100%" style="max-width: 800px;" alt="Bunlara da göz atın">
-  <br><i>Aranan Ürünler</i>
-  <br><br>
-
-  <hr><br>
-
-  <h3>🔐 Yönetici Paneli (Admin Dashboard)</h3>
-  <p>Spike Tailwind teması ile güçlendirilmiş, modern ve responsive yönetim paneli.</p>
-  <img src="ımages/AdminPanel.png" width="100%" style="max-width: 800px;" alt="Admin Paneli">
-  <br><br>
-
-  <h3>📦 Ürün & Kategori Yönetimi</h3>
-  <p>Admin panelinden kolayca ürün ekleme, güncelleme ve stok takibi işlemleri.</p>
-
-  <img src="ımages/CreateProduct.png" width="100%" style="max-width: 800px;" alt="Ürün Ekleme">
-  <br><i>Ürün Ekleme Formu</i>
-  <br><br>
-
-  <img src="ımages/ProductList.png" width="100%" style="max-width: 800px;" alt="Ürün Listesi">
-  <br><i>Ürün Yönetim Tablosu</i>
-  <br><br>
-
-  <img src="ımages/CreateCategory.png" width="100%" style="max-width: 800px;" alt="Kategori Ekleme">
-  <br><i>Kategori Ekleme</i>
-  <br><br>
-
-  <img src="ımages/CategoryList.png" width="100%" style="max-width: 800px;" alt="Kategori Listesi">
-  <br><i>Kategori Yönetimi</i>
-  <br><br>
-
-  <hr><br>
-
-  <h3>🔑 Güvenlik & Giriş</h3>
-  <p>MongoDB Identity altyapısı ile güvenli Admin giriş ve kayıt ekranları.</p>
-
-  <img src="ımages/Login1.png" width="100%" style="max-width: 800px;" alt="Giriş Ekranı">
-  <br><i>Giriş Ekranı</i>
-  <br><br>
-
-  <img src="ımages/Register1.png" width="100%" style="max-width: 800px;" alt="Kayıt Ekranı">
-  <br><i>Kayıt Ekranı</i>
-  <br><br>
-
-  <hr><br>
-
-  <h3>✉️ Bülten & İletişim</h3>
-  <p>Kullanıcıların mail bültenine abone olması ve otomatik indirim kodu gönderimi.</p>
-
-  <img src="ımages/Mail.png" width="100%" style="max-width: 800px;" alt="Bülten Alanı">
-  <br><br>
-
-  <img src="ımages/MailMessage.png" width="100%" style="max-width: 800px;" alt="Gelen Mail Örneği">
-
+  <img src="ımages/Home.png" width="100%" style="max-width: 800px;" alt="Homepage">
 </div>
 
+### Product and Category Views
+
+<div align="center">
+  <img src="ımages/Category.png" width="100%" style="max-width: 800px;" alt="Categories">
+  <br><br>
+  <img src="ımages/AllProduct.png" width="100%" style="max-width: 800px;" alt="Product List">
+  <br><br>
+  <img src="ımages/MostPopulerProduct.png" width="100%" style="max-width: 800px;" alt="Popular Products">
+</div>
+
+### Admin Panel
+
+<div align="center">
+  <img src="ımages/AdminPanel.png" width="100%" style="max-width: 800px;" alt="Admin Panel">
+  <br><br>
+  <img src="ımages/ProductList.png" width="100%" style="max-width: 800px;" alt="Product Management">
+  <br><br>
+  <img src="ımages/CreateProduct.png" width="100%" style="max-width: 800px;" alt="Create Product">
+</div>
+
+### Newsletter Mail Flow
+
+<div align="center">
+  <img src="ımages/Mail.png" width="100%" style="max-width: 800px;" alt="Newsletter Form">
+  <br><br>
+  <img src="ımages/MailMessage.png" width="100%" style="max-width: 800px;" alt="Mail Message">
+</div>
+
+## What I Practiced
+
+- ASP.NET Core MVC project structure
+- MongoDB integration with .NET
+- Configuration binding with strongly typed settings
+- Service layer and interface-based design
+- DTO usage for create/update/list operations
+- AutoMapper configuration
+- ViewComponent-based dynamic page sections
+- CRUD operations with MongoDB collections
+- SMTP email sending with MailKit
+- Admin panel template integration
+
+## Future Improvements
+
+- Add authentication and authorization for admin pages
+- Add seed data for easier local setup
+- Add Docker Compose for MongoDB and the web app
+- Add validation for DTOs
+- Add pagination and search for product lists
+- Move all sensitive configuration to user secrets or environment variables
+- Add unit/integration tests
+- Remove unused SQL Server migration/context files if they are not needed
+- Add CI workflow with GitHub Actions
+
+## Repository
+
+GitHub: https://github.com/FatmaBuseBorlu/FoodMartMongo
