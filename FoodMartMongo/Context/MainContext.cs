@@ -1,5 +1,3 @@
-﻿using FoodMartMongo.Entities;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FoodMartMongo.Context
@@ -8,7 +6,7 @@ namespace FoodMartMongo.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-NBRMDOS;initial Catalog=EmailChatDb;integrated Security=true;trust server certificate=true");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=EmailChatDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }
